@@ -1,0 +1,11 @@
+#refreshBtn, #uploadBtn, #addFolderBtn,#deleteBtn,#downloadBtn{
+    color: #17a2b8;
+}
+#refreshBtn:hover, #uploadBtn:hover, #addFolderBtn:hover,#deleteBtn:hover,#downloadBtn:hover{
+    color: #117a8b;
+    cursor: pointer;
+}
+
+#refreshBtn:active,#uploadBtn:active, #addFolderBtn:active,#deleteBtn:active,#downloadBtn:active{
+    color:#138496;
+}

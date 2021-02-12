@@ -6,31 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Drive</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+    <link href="google-drive.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/30d6b804f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="d-flex justify-content-center mt-5" style="display: none">
-        <div class="d-flex align-items-center align-self-center card p-3 text-center" style="width:300px">
-            <span class="mt-2">Login using Google Account</span>
-            <button class="btn btn-dark mt-3 px-4" id="login" type="button">Login</button> </div>
+    <div class="container mt-5 d-none" id="login">
+        <div class="row">
+            <div class="col-4 offset-4 p-3 shadow">
+                <div class="align-items-center align-self-center p-3 text-center">
+                    <div class="mt-2" >Login with Google Account</div>
+                    <button class="btn btn-info mt-3 px-4" id="loginBtn" type="button">Login</button> 
+                </div>
+            </div>
+        </div>
     </div>
 
-
-
-
-
-
+    <div class="container" id="drive">
+            <div class="container mt-3 p-2">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h3>Welcome <span id="name">Ravi Teja</span>!</h3>
+                    </div>
+                    <div class="col-2 align-self-center">         
+                    </div>
+                    <div class="col-5 align-self-center">
+                            <div class="row">
+                                <div class="col-6 text-left align-self-center">
+                                    <span class="d-block" >Total Space: <span id="totalQuota"></span>
+                                    <span class="d-block" >Used Space: <span id="usedQuota"> </span>
+                                </div>
+                                <div class="col-6  text-right align-self-center">
+                                    <button class="btn btn-info px-4 " id="logoutBtn" type="button">Logout</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 p-1 text-left">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0">
+                              <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                          </nav>
+                    </div>
+                    <div class="col-4 text-right">
+                            <i class="fas fa-sync-alt fa-2x p-2 mx-3" id="refreshBtn" title="Refresh"></i>
+                            <i class="fas fa-cloud-upload-alt fa-2x p-2 mx-3" id="uploadBtn" title="Upload to Google Drive" ></i>
+                            <i class="fas fa-folder-plus fa-2x p-2 mx-3" id="addFolderBtn" title="Add Folder"></i>
+                            <input type="file" id="fUpload" class="d-none"/>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="container p-4 d-flex flex-row" id="drive-content">
+            </div>
+            <pre id="content" style="white-space: pre-wrap;"></pre>
+    </div>
 
     <script src="google-drive.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
-    <script async defer src="https://apis.google.com/js/api.js" 
+     <script async defer src="https://apis.google.com/js/api.js" 
       onload="this.onload=function(){};handleClientLoad()" 
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
+    </script> 
 
 
 </body>
